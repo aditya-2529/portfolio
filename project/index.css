@@ -1,0 +1,111 @@
+
+.head1{
+    font-family: "Sofia",sans-serif;
+    display: flex;
+}
+.head2 {
+	font-size: 5vw;
+	font-weight: 700;
+	/* background: linear-gradient(to right,#095fab 10%, #25abe8 50%, #57d75b 60%); */
+    font-family: "Sofia",sans-serif;
+    text-align: center;
+}
+@keyframes animate {
+    0% {
+    transform:scaleX(0);
+    transform-origin: left;
+    }
+    50%
+    {
+      transform:scaleX(1);
+    transform-origin: left;
+    }
+    50.1%
+    {
+      transform:scaleX(1);
+    transform-origin: right;
+      
+    }
+    
+    100%
+    {
+      transform:scaleX(0);
+    transform-origin: right;
+      
+    }
+    
+    
+  } 
+.content p {
+    line-height: 1.2;
+	
+}
+
+@keyframes textclip {
+	to {
+		background-position: 200% center;
+	}
+}
+@keyframes a-ltr-after{
+    0% {transform: translateX(-100%)}
+    100% {transform: translateX(101%)}
+}
+body{
+    background-color: rgb(239, 211, 69);
+	/* background: linear-gradient(to right,#095fab 10%, #25abe8 50%, #57d75b 60%); */
+}
+.head1 .img1{
+    display: flex;
+    width: 100px;
+    margin-left: auto;
+    margin-top: 15px;
+    margin-right: 15px;
+    padding-right: 15px;
+}
+p{
+    font-size: 4vw;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    font-family: "Sofia",sans-serif;
+}
+  
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+  
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+  
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+  
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+  
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
