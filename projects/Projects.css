@@ -1,0 +1,54 @@
+body{
+    background-color: aqua;
+    margin-left: 25vh;
+    margin-right: 25vh;
+    font-size: 5vh;
+    font-family: "Sofia",sans-serif;
+}
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+.left1{
+    display: flex;
+    color: blue;
+}
+.underline {
+    display: inline-block;
+    position: relative;
+}
+.underline:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #025178;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-in;
+    transform: scaleX(0.7);
+    
+}
+.top-nav {
+    overflow: hidden;
+    background-color: #111;
+}
+  
+.top-nav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 30px;
+}
+  
+.top-nav a:hover {
+    background-color: #04AA;
+}
+.top-nav a.active {
+    background-color: #04AA;
+    color: white;
+}

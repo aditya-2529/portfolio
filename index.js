@@ -1,11 +1,7 @@
 function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    /*document.getElementById("main").style.marginLeft = "250px";*/
-    document.body.style.backgroundColor="rgba(239, 211, 69,0.6)";
+    document.getElementById("mySidenav").style.width = "100%";
 }
   
 function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    /*document.getElementById("main").style.marginLeft= "0";*/
-    document.body.style.backgroundColor="#EFD345";
+    document.getElementById("mySidenav").style.width = "0%";
 }
