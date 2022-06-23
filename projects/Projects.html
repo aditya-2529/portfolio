@@ -4,32 +4,88 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <title>Project</title>
     <link rel="stylesheet" href="Projects.css">
+    
 </head>
 <body>
-    <section class="container">
+    <section>
+        <div class="bars"></div>
         <div class="top-nav">
             <a href="../index.html">Home</a>
             <a href="./desc.html">About</a>
-            <a class="active" href="./Projects.html">Projects</a>
+            <a class="active" href="#">Projects</a>
             <a href="./contact.html">Contact</a>
         </div>
-        <div class="left1">
-            <h1 class="underline">Projects</h1><h1>:</h1>
-        </div>
     </section>
-    <section class="lists">
+    <div class="bubbles">
+        <span style="--i:11;"></span>
+        <span style="--i:12;"></span>
+        <span style="--i:24;"></span>
+        <span style="--i:10;"></span>
+        <span style="--i:14;"></span>
+        <span style="--i:23;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:16;"></span>
+        <span style="--i:19;"></span>
+        <span style="--i:20;"></span>
+        <span style="--i:22;"></span>
+        <span style="--i:25;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:21;"></span>
+        <span style="--i:15;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:26;"></span>
+        <span style="--i:17;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:28;"></span>
+        <span style="--i:11;"></span>
+        <span style="--i:12;"></span>
+        <span style="--i:24;"></span>
+        <span style="--i:10;"></span>
+        <span style="--i:14;"></span>
+        <span style="--i:23;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:16;"></span>
+        <span style="--i:19;"></span>
+        <span style="--i:20;"></span>
+        <span style="--i:22;"></span>
+        <span style="--i:25;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:21;"></span>
+        <span style="--i:15;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:26;"></span>
+        <span style="--i:17;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:28;"></span>
+    </div>
+    <section>
         <div class="lists1">
+            <div class="left1">
+                <h1 class="underline">Projects</h1><h1>:</h1>
+            </div>
             <ol style="list-style-type:1">
                 <li><strong>Rain Drops</strong>:</li>
                 <p>It is the website created for experiment and shows the raindrops on the screen .</p>
-                <a href="pp1.html">Visit</a>
+                <div class="btn">
+                    <a href="pp1.html">Visit</a>
+                </div>
                 <li><strong>Real Time Clock</strong>:</li>
                 <p>It is the website created for experiment and shows the raindrops on the screen .</p>
-                <a href="pp2.html">Visit</a>
+                <div class="btn">
+                    <a href="pp2.html">Visit</a>
+                </div>
             </ol>
         </div>
     </section>
+    <script>
+        const navigation = document.querySelector('.top-nav');
+        document.querySelector('.bars').onclick = function(){
+            this.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

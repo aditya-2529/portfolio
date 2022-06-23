@@ -10,33 +10,33 @@
         <script src="index.js"></script>
     </head>
     <body>
-        <section id="main-head">
-            <div class="head1"> 
-                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
-            </div>
-            <div class="toggle"></div>
-        </section>
-        <section id="contains">
-            <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a class="active" href="./projects/index.html">Home</a>
-                <a href="./projects/desc.html">About</a>
-                <a href="./projects/Projects.html">Projects</a>
-                <a href="./projects/contact.html">Contact</a>
-            </div>
-            <div class="head2">
-                <div class="content">
-                    <p>
-                        Portfolio
-                    </p>
-                </div>
-            </div>
-        
-        </section>
+        <header>
+            <img src="./images/header.jpg" class="banner">
+            <a href="#" class="logo">Portfolio</a>
+            <div class="bars"></div>
+            <nav>
+                <ul>
+                    <li><a class="active" href="#">Home</a></li>
+                    <li><a href="./projects/desc.html">About</a></li>
+                    <li><a href="./projects/Projects.html">Projects</a></li>
+                    <li><a href="./projects/contact.html">Contact</a></li>
+                    <div class="toggle"></div>
+                </ul>
+            </nav>
+        </header>
         <script>
             const body = document.querySelector('body');
             document.querySelector('.toggle').onclick = function(){
             body.classList.toggle('light')
+            }
+            window.addEventListener("scroll",function(){
+                const header = document.querySelector('header');
+                header.classList.toggle('sticky',window.scrollY > 0);
+            });
+            const navigation = document.querySelector('nav');
+            document.querySelector('.bars').onclick = function(){
+                this.classList.toggle('active');
+                navigation.classList.toggle('active');
             }
         </script>
     

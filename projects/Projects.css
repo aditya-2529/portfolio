@@ -1,18 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
-    background-color: aqua;
-    margin-left: 25vh;
-    margin-right: 25vh;
+    background: #0c192c;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: 15px 50px 50px 50px;
     font-size: 5vh;
     font-family: "Sofia",sans-serif;
-}
-@media screen and (max-height: 450px) {
-    body {padding-top: 15px;}
-    body {font-size: 18px;}
-    body {margin-left: 5vh;}
+    color: #fff;
 }
 .left1{
     display: flex;
-    color: blue;
 }
 .underline {
     display: inline-block;
@@ -52,4 +54,122 @@ body{
 .top-nav a.active {
     background-color: #04AA;
     color: white;
+}
+.lists1 ol .btn{
+    position: relative;
+    width: 155px;
+    height: 50px;
+    margin: 20px;
+}
+.lists1 ol .btn a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    background: #025178;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 1s;
+}
+.lists1 ol .btn:hover a{
+    letter-spacing: 3px;
+}
+.lists1 ol .btn a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255,255,255,0.25),transparent);
+    transform: skewX(45deg) translateX(0);
+    transition: 0.25s;
+}
+.lists1 ol .btn:hover a::before{
+    transform: skewX(45deg) translateX(200px);
+}
+@media(max-width:912px){
+    body{
+        margin: 15px 50px 0 60px;
+    }
+    .top-nav.active {
+        visibility: visible;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .top-nav{
+        visibility: hidden;
+    }
+    .top-nav a{
+        border-radius: 10px;
+    }
+    .bars.active::before{
+        content: '\f00d';
+        font-family: fontAwesome;
+        color: #fff;
+        position: fixed;
+        z-index: 5;
+    }
+    .bars::before{
+        align-items: center;
+        top: 15px;
+        right: 40px;
+        width: 50px;
+        cursor: pointer;
+        content: '\f0c9';
+        font-family: fontAwesome;
+        color: #fff;
+    }
+}
+.bubbles{
+    position: relative;
+    display: flex;
+    z-index: -10;
+}
+.bubbles span{
+    position: relative;
+    width: 300px;
+    height: 30%;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+    0 0 0 50px #4fc3dc,
+    0 0 0 100px #4fc3dc;
+    animation: animate 0.1s linear infinite;
+    animation-duration: calc(100s / var(--i));
+}
+.bubbles span:nth-child(even){
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d75,
+    0 0 0 50px #ff2d75,
+    0 0 0 100px #ff2d75;
+}
+@keyframes animate{
+    0%{
+        transform: translateY(100vh) scale(0);
+    }
+    100%{
+        transform: translateY(-10vh) scale(1);
+    }
 }
