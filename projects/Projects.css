@@ -6,9 +6,9 @@ body{
     font-family: "Sofia",sans-serif;
 }
 @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-    body{margin-left: 5vh;}
+    body {padding-top: 15px;}
+    body {font-size: 18px;}
+    body {margin-left: 5vh;}
 }
 .left1{
     display: flex;
