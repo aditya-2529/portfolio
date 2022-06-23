@@ -112,6 +112,9 @@ header.sticky .banner{
     opacity: 0.5;
 }
 @media(max-width: 991px){
+    body{
+        max-width: 1500px;
+    }
     header{
         padding: 40px;
     }
