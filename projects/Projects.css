@@ -1,17 +1,7 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 body{
     background: #0c192c;
-    position: relative;
-    min-height: 100vh;
-    width: 100%;
-    height: 100vh;
     overflow: hidden;
-    width: 100%;
-    height: 100vh;
     margin: 15px 50px 50px 50px;
     font-size: 5vh;
     font-family: "Sofia",sans-serif;
@@ -19,24 +9,6 @@ body{
 }
 .left1{
     display: flex;
-}
-.underline {
-    display: inline-block;
-    position: relative;
-}
-.underline:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #025178;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-in;
-    transform: scaleX(0.7);
-    
 }
 .top-nav {
     overflow: hidden;
@@ -67,27 +39,17 @@ body{
 }
 .lists1 ol .btn a{
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
+    height: 80%;
     display: flex;
     justify-content: center;
     background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 30px;
     background: #025178;
     color: #fff;
-    font-weight: 400;
-    letter-spacing: 1px;
     text-decoration: none;
     overflow: hidden;
     transition: 1s;
-}
-.lists1 ol .btn:hover a{
-    letter-spacing: 3px;
 }
 .lists1 ol .btn a::before{
     content: '';
@@ -145,6 +107,15 @@ body{
         color: #fff;
     }
 }
+@media(max-height:1200px),(max-width:600px){
+    
+    .lists1 ol .btn{
+        height: 70px;
+        font-size: 0.8em;
+        align-items: center;
+        align-self: center;
+    }
+}
 .bubbles{
     position: relative;
     display: flex;
@@ -152,7 +123,7 @@ body{
 }
 .bubbles span{
     position: relative;
-    width: 300px;
+    width: 30px;
     height: 30px;
     background: #4fc3dc;
     margin: 0 4px;
