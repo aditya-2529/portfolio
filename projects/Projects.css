@@ -1,8 +1,8 @@
 
 body{
     background: #0c192c;
-    overflow: hidden;
     margin: 15px 50px 50px 50px;
+    min-height: 10vh;
     font-size: 5vh;
     font-family: "Sofia",sans-serif;
     color: #fff;
@@ -42,6 +42,7 @@ body{
     width: 100%;
     height: 80%;
     display: flex;
+    font-size: 25px;
     justify-content: center;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 30px;
@@ -68,6 +69,7 @@ body{
 @media(max-width:912px){
     body{
         margin: 15px 50px 0 60px;
+        min-height: 250vh;
     }
     .top-nav.active {
         visibility: visible;
@@ -106,33 +108,33 @@ body{
         font-family: fontAwesome;
         color: #fff;
     }
-    .bubbles span{
-        position: relative;
-        width: 7px;
-        height: 7px;
-        background: #4fc3dc;
-        margin: 0 4px;
-        border-radius: 50%;
-        box-shadow: 0 0 0 1px #4fc3dc44;
-        animation: animate 0.1s linear infinite;
-        animation-duration: calc(125s / var(--i));
-    }
-    .bubbles span:nth-child(even){
-        background: #ff2d75;
-        border-radius: 50%;
-        box-shadow: 0 0 0 1px rgb(255, 45, 117,0.5);
-    }
 }
 .bubbles{
     position: relative;
-    display: flex;
+    display: inline-flex;
     z-index: -10;
+}
+.bubbles span{
+    position: relative;
+    width: 27px;
+    height: 27px;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #4fc3dc44;
+    animation: animate 0.1s linear infinite;
+    animation-duration: calc(100s / var(--i));
+}
+.bubbles span:nth-child(even){
+    background: #ff2d75;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgb(255, 45, 117,0.5);
 }
 @keyframes animate{
     0%{
-        transform: translateY(100vh) scale(0);
+        transform: translateY(250vh) scale(0);
     }
     100%{
-        transform: translateY(-10vh) scale(1);
+        transform: translateY(-100vh) scale(1);
     }
 }
