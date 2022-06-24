@@ -113,3 +113,12 @@ body{
     content: '\f099';
     font-family: fontAwesome;
 }
+@media(max-width:670px){
+    .card .imgBox{
+        visibility: hidden;
+    }
+    .card:hover{
+        transform: translateX(0%);
+        position: fixed;
+    }
+}
