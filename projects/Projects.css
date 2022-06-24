@@ -106,36 +106,27 @@ body{
         font-family: fontAwesome;
         color: #fff;
     }
-}
-@media(max-height:1200px),(max-width:600px){
-    
-    .lists1 ol .btn{
-        height: 70px;
-        font-size: 0.8em;
-        align-items: center;
-        align-self: center;
+    .bubbles span{
+        position: relative;
+        width: 7px;
+        height: 7px;
+        background: #4fc3dc;
+        margin: 0 4px;
+        border-radius: 50%;
+        box-shadow: 0 0 0 1px #4fc3dc44;
+        animation: animate 0.1s linear infinite;
+        animation-duration: calc(125s / var(--i));
+    }
+    .bubbles span:nth-child(even){
+        background: #ff2d75;
+        border-radius: 50%;
+        box-shadow: 0 0 0 1px rgb(255, 45, 117,0.5);
     }
 }
 .bubbles{
     position: relative;
     display: flex;
     z-index: -10;
-}
-.bubbles span{
-    position: relative;
-    width: 30px;
-    height: 30px;
-    background: #4fc3dc;
-    margin: 0 4px;
-    border-radius: 50%;
-    box-shadow: 0 0 0 10px #4fc3dc44;
-    animation: animate 0.1s linear infinite;
-    animation-duration: calc(125s / var(--i));
-}
-.bubbles span:nth-child(even){
-    background: #ff2d75;
-    border-radius: 50%;
-    box-shadow: 0 0 0 10px rgb(255, 45, 117,0.5);
 }
 @keyframes animate{
     0%{
