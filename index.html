@@ -30,22 +30,8 @@
             <div class="container">
                 <div class="card">
                     <div class="content">
-                        <h2>About</h2>
-                        <p></p>
-                        <a href="./projects/desc.html">Read More</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="content">
-                        <h2>About</h2>
-                        <p></p>
-                        <a href="./projects/desc.html">Read More</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="content">
-                        <h2>About</h2>
-                        <p></p>
+                        <h2>About</h2><br>
+                        <p>Aditya Ranjan<br>App Developer || Web Developer</p><br>
                         <a href="./projects/desc.html">Read More</a>
                     </div>
                 </div>
@@ -60,10 +46,17 @@
                 const header = document.querySelector('header');
                 header.classList.toggle('sticky',window.scrollY > 0);
             });
+            window.addEventListener("scroll",function(){
+                const header = document.querySelector('section');
+                header.classList.toggle('sticky',window.scrollY > 0);
+            });
             const navigation = document.querySelector('nav');
             document.querySelector('.bars').onclick = function(){
                 this.classList.toggle('active');
                 navigation.classList.toggle('active');
+            }
+            document.querySelector('.active').onclick = function(){
+                this.classList.toggle('act');
             }
         </script>
     
