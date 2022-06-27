@@ -32,6 +32,7 @@ body.light .toggle::before{
 }
 body.light {
     background: #fff;
+    color: #000;
 }
 header{
     position: fixed;
@@ -138,7 +139,6 @@ header.sticky .banner{
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        z-index: 10;
     }
     nav ul li a{
         font-size: 1.5em;
@@ -163,7 +163,6 @@ header.sticky .banner{
         content: '\f00d';
         font-family: fontAwesome;
         color: #fff;
-
     }
 }
 section{

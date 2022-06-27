@@ -70,8 +70,14 @@ body{
 }
 @media(max-width:912px){
     body{
-        margin: 15px 50px 0 60px;
-        min-height: 250vh;
+        background: url('../images/mortarboard.gif');
+        background-repeat: no-repeat;
+        background-position: 10px;
+        color: #025178;
+
+    }
+    .lists1{
+        margin-top: -15%;
     }
     .top-nav.active {
         visibility: visible;
@@ -108,6 +114,11 @@ body{
         cursor: pointer;
         content: '\f0c9';
         font-family: fontAwesome;
-        color: #fff;
+        color: #000;
+    }
+}
+@media(max-width:580px){
+    .lists1{
+        margin-top: -50%;
     }
 }
