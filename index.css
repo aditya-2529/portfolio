@@ -1,4 +1,4 @@
-/*{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,16 +7,6 @@ body {
 	font-family: "Sofia",sans-serif;
     min-height: 1000px;
     background: #154f56;
-}
-.toggle{
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-    border-radius: 6px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    float: right;
 }
 .toggle::before{
     content: '\f185';
@@ -65,13 +55,47 @@ header .logo{
     color: #fff;
     font-weight: 700;
     transition: 1s;
-    z-index: 1;
     text-decoration: none;
+}
+header .logo::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 5px solid #ec1839;
+    border-right: 5px solid #ec1839;
+}
+header .logo::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-bottom: 5px solid #ec1839;
+    border-left: 5px solid #ec1839;
+    bottom: 10px;
+    left: -10px;
+}
+header.sticky .logo::after{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-top: 3.5px solid #ec1839;
+    border-right: 3.5px solid #ec1839;
+}
+header.sticky .logo::before{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-bottom: 3.5px solid #ec1839;
+    border-left: 3.5px solid #ec1839;
+    bottom: 0;
+    left: -10px;
 }
 nav{
     position: relative;
     display: flex;
-    z-index: 1;
 }
 nav ul{
     position: relative;
@@ -118,6 +142,7 @@ header.sticky .banner{
         min-height: 2000px;
     }
     header{
+        z-index: 100;
         padding: 40px;
     }
     header.sticky .logo{
@@ -158,7 +183,6 @@ header.sticky .banner{
         content: '\f0c9';
         font-family: fontAwesome;
         color: #fff;
-        z-index:100;
     }
     header.sticky .bars.active::before{
         content: '\f00d';
@@ -166,10 +190,17 @@ header.sticky .banner{
         color: #fff;
     }
 }
+h3.my-profession{
+    color: #fff;
+}
 section{
     max-height: 30vh;
+    opacity: 0;
 }
-section.sticky .container{
+section.sticky{
+    opacity: 1;
+}
+section .container{
     transform: translateX(-20px);
     opacity: 1;
     transition: 1.5s;
@@ -178,7 +209,6 @@ section.sticky .container{
     margin-top: 25vh;
     transform: translateX(100px);
     transition-delay: 0.25s;
-    opacity: 0;
     position: relative;
     display: flex;
     justify-content: center;
@@ -226,8 +256,8 @@ section.sticky .container{
     text-decoration: none;
     font-weight: 500;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}*/
-:root{
+}
+/*:root{
     --bg-black-900 : #f2f2fc;
     --bg-black-100: #fdf9ff;
     --bg-black-50 :#e8dfec;
@@ -462,4 +492,4 @@ h3.my-profession{
 .home .home-img img{
     margin: auto;
     border-radius: 5px;
-}
+}*/

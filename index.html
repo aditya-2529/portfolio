@@ -13,7 +13,7 @@
         <script src="./src_js/vanilla-tilt.js"></script>
     </head>
     <body>
-        <div class="main-container">
+        <!-- <div class="main-container">
             <div class="aside">
                 <div class="logo">
                     <a href="#"><span>A</span>tlas</a>
@@ -34,7 +34,7 @@
                         <div class="row">
                             <div class="home-info padd-15">
                                 <h3 class="hello">Hello, my name is <span class="name">Aditya Ranjan</span></h3>
-                                <h3 class="my-profession">I'm a <span class="typing">Web Developer</span></h3>
+                                <h3 class="my-profession">I'm a <span class="typing"></span></h3>
                                 <p></p>
                                 <a href="#contact" class="btn hire-me">Hire Me</a>
                             </div>
@@ -45,7 +45,7 @@
                     </div>
                 </section>
             </div>
-        </div>
+        </div> -->
         <header>
             <img src="./images/header.jpg" class="banner">
             <a href="#" class="logo">Portfolio</a>
@@ -65,7 +65,7 @@
                 <div class="card" id="card">
                     <div class="content">
                         <h2>About</h2><br>
-                        <p>Aditya Ranjan<br>App Developer || Web Developer</p><br>
+                        <p>Aditya Ranjan<br><h3 class="my-profession">I'm a <span class="typing"></span></h3></p><br>
                         <a href="./projects/desc.html">Read More</a>
                     </div>
                 </div>
@@ -88,7 +88,6 @@
             document.querySelector('.bars').onclick = function(){
                 this.classList.toggle('active');
                 navigation.classList.toggle('active');
-                document.getElementById('card').style.opacity = 0;
             }
             var typed = new Typed(".typing",{
             strings:["Web Designer","Web Developer","App Developer"],
