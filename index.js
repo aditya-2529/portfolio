@@ -1,7 +1,10 @@
-$(window).scroll(function(){
-    var scroll = $(window).scrollTop(),
-    dh = $(document).height(),
-    wh = $(window).height (),
-    scrollPercent = (scroll / (dh - wh))*100;
-    $('#progressbar').css('height', scrollPercent + '%');
-})
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("page").style.display = "block";
+}

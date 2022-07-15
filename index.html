@@ -12,7 +12,15 @@
         <script type="text/javascript" src="index.js"></script>
         <script src="./src_js/vanilla-tilt.js"></script>
     </head>
-    <body>
+    <body onload="myFunction()" style="margin: 0;background: #121213;">
+        <div class="loader" id="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <h3>Portfolio</h3>
+        </div>
+        <section id="page">
         <header>
             <a href="#" class="logo">Portfolio</a>
             <div class="bars acti"></div>
@@ -26,7 +34,6 @@
                 </ul>
             </nav>
         </header>
-        <section class="banner"></section>
         <section>
             <div class="container">
                 <div class="card" id="card">
@@ -41,6 +48,7 @@
                     </div>
                 </div>
             </div>
+        </section>
         </section>
         <script>
             const body = document.querySelector('body');
