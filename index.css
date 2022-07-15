@@ -4,11 +4,13 @@
     box-sizing: border-box;
 }
 body {
+    min-height: 200em;
+    overflow: overlay;
 	font-family: "Sofia",sans-serif;
-    min-height: 1000px;
-    background: #154f56;
+    background: linear-gradient(45deg,#ff0057,#2196f3);
 }
 .toggle{
+    font-size: 50px;
     width: 60px;
     height: 60px;
     cursor: pointer;
@@ -58,77 +60,28 @@ body.light {
     transition: 0s;
 }
 header{
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    padding: 0 100px;
-    background: #000;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    transition: 1s;
-}
-header .banner{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 1s;
+    transition: 0.6s;
+    padding: 40px 100px;
+
 }
 header .logo{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 15vw;
-    color: #fff;
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    padding: 15px;
+    font-size: 3em;
     font-weight: 700;
-    transition: 1s;
+    color: #fff;
+    transition: 0.6s;
     text-decoration: none;
-}
-header .logo::after{
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-top: 5px solid #ec1839;
-    border-right: 5px solid #ec1839;
-    opacity: 0;
-}
-header .logo::before{
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-bottom: 5px solid #ec1839;
-    border-left: 5px solid #ec1839;
-    bottom: 10px;
-    left: -10px;
-    opacity: 0;
-}
-header.sticky .logo::after{
-    content: '';
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    border-top: 3.5px solid #ec1839;
-    opacity: 1;
-    border-right: 3.5px solid #ec1839;
-}
-header.sticky .logo::before{
-    content: '';
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    border-bottom: 3.5px solid #ec1839;
-    border-left: 3.5px solid #ec1839;
-    opacity: 1;
-    bottom: 0;
-    left: -10px;
+    text-transform: uppercase;
 }
 nav{
     position: relative;
@@ -139,12 +92,8 @@ nav ul{
     display: flex;
     transition: 0.25s;
     transform: translateX(100px);
-    opacity: 0;
-}
-header.sticky nav ul{
-    transform: translateX(0);
     opacity: 1;
-    transition-delay: 0.75s;
+    float: right;
 }
 nav ul li{
     list-style: none;
@@ -165,24 +114,12 @@ nav ul li a:hover{
 header.sticky{
     height: 80px;
 }
-header.sticky .logo{
-    position: absolute;
-    font-size: 2em;
-    left: 100px;
-    transform: translate(0,-50%);
-}
-header.sticky .banner{
-    opacity: 0;
-}
 @media(max-width: 991px){
-    body{
-        min-height: 2000px;
-    }
     header{
         z-index: 100;
         padding: 40px;
     }
-    header.sticky .logo{
+    header .logo{
         left: 40px;
     }
     nav ul{
@@ -192,10 +129,10 @@ header.sticky .banner{
     }
     nav.active ul{
         position: fixed;
-        top: 80px;
-        left: 0;
+        top: 0;
+        left: -100px;
         width: 100%;
-        height: calc(100% - 8px);
+        height: 100%;
         background: #000;
         display: flex;
         justify-content: center;
@@ -203,14 +140,15 @@ header.sticky .banner{
         flex-direction: column;
     }
     nav ul li a{
-        font-size: 1.5em;
+        font-size: 5vh;
         padding: 5px 15px;
     }
-    header.sticky nav ul{
+    header nav ul{
         opacity: 1;
         visibility: visible;
     }
-    header.sticky .bars::before{
+    header .bars::before{
+        font-size: 50px;
         position: fixed;
         top: 15px;
         right: 40px;
@@ -221,21 +159,23 @@ header.sticky .banner{
         font-family: fontAwesome;
         color: #fff;
     }
-    header.sticky .bars.active::before{
+    header .bars.active::before{
+        font-size: 50px;
         content: '\f00d';
         font-family: fontAwesome;
-        font-size: 100%;
+        z-index: 10;
         color: #fff;
+    }
+    .container {
+        top: 50px;
+        left: 10px;
+        font-size: 2em;
     }
 }
 h3.my-profession{
     color: #fff;
 }
 section{
-    max-height: 30vh;
-    opacity: 0;
-}
-section.sticky{
     opacity: 1;
 }
 section .container{
@@ -244,7 +184,6 @@ section .container{
     transition: 1.5s;
 }
 .container {
-    margin-top: 25vh;
     transform: translateX(100px);
     transition-delay: 0.25s;
     position: relative;
@@ -255,8 +194,8 @@ section .container{
 }
 .container .card{
     position: relative;
-    width: 280px;
-    height: 400px;
+    width: 28em;
+    height: 40em;
     margin: 30px;
     box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
     border-radius: 15px;
@@ -296,13 +235,13 @@ section .container{
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 ::-webkit-scrollbar{
-    width: 0;
+    width: 5px;
+    height: 10px;
 }
-/* #progressbar{
-    position: fixed;
-    right: 0;
-    width: 15px;
-    height: 10%;
-    border-radius: 10px;
-    background: linear-gradient(to top,#fcb045,#fd1d1d,#833ab4);
-} */
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(transparent,#30ff00);
+    border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(transparent,#00c6ff);
+}

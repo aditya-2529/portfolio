@@ -13,9 +13,7 @@
         <script src="./src_js/vanilla-tilt.js"></script>
     </head>
     <body>
-        <!-- <div id="progressbar"></div> -->
         <header>
-            <img src="./images/header.jpg" class="banner">
             <a href="#" class="logo">Portfolio</a>
             <div class="bars acti"></div>
             <nav>
@@ -28,6 +26,7 @@
                 </ul>
             </nav>
         </header>
+        <section class="banner"></section>
         <section>
             <div class="container">
                 <div class="card" id="card">
@@ -48,14 +47,6 @@
             document.querySelector('.toggle').onclick = function(){
             body.classList.toggle('light')
             }
-            window.addEventListener("scroll",function(){
-                const header = document.querySelector('header');
-                header.classList.toggle('sticky',window.scrollY > 0);
-            });
-            window.addEventListener("scroll",function(){
-                const header = document.querySelector('section');
-                header.classList.toggle('sticky',window.scrollY > 0);
-            });
             const navigation = document.querySelector('nav');
             document.querySelector('.bars').onclick = function(){
                 this.classList.toggle('active');
