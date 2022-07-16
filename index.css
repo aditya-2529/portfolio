@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 body {
-    min-height: 200em;
     overflow: overlay;
 	font-family: "Sofia",sans-serif;
 }
@@ -83,14 +82,14 @@ header .logo{
     text-transform: uppercase;
 }
 nav{
-    position: relative;
+    position: absolute;
     display: flex;
 }
 nav ul{
-    position: relative;
+    position: absolute;
     display: flex;
     transition: 0.25s;
-    transform: translateX(100px);
+    transform: translateX(1000px);
     opacity: 1;
     float: right;
 }
@@ -109,9 +108,6 @@ nav ul li a.active{
 }
 nav ul li a:hover{
     color: #ff275f;
-}
-header.sticky{
-    height: 80px;
 }
 @media(max-width: 991px){
     header{
@@ -143,6 +139,7 @@ header.sticky{
         padding: 5px 15px;
     }
     header nav ul{
+        position: fixed;
         opacity: 1;
         visibility: visible;
     }
@@ -328,6 +325,7 @@ section .container{
     50%,100%{bottom: 100%;}
 }
 #page{
+    min-height: 200em;
     background: linear-gradient(45deg,#ff0057,#2196f3);
     display: none;
 }
