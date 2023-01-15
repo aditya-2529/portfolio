@@ -72,21 +72,15 @@ export default function Home() {
         </section>
         <section>
           <div>
-            <h3 className="text-3xl py-1 dark:text-white ">Services I offer</h3>
+            <h3 className="text-3xl py-1 dark:text-white ">My Work Experience</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              Since the beginning of my journey as a freelance designer and
-              developer, I've done remote work for
+              Since the beginning of my journey as a web developer.
               <span className="text-teal-500"> agencies </span>
               consulted for <span className="text-teal-500">startups </span>
-              and collaborated with talanted people to create digital products
-              for both business and consumer use.
-            </p>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              I offer from a wide range of services, including brand design,
-              programming and teaching.
+              and collaborated with talanted people to create digital ideas.
             </p>
           </div>
-          <div className="lg:flex gap-10">
+          {/* <div className="lg:flex gap-10">
             <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
               <Image src={design} width={100} height={100} />
               <h3 className="text-lg font-medium pt-8 pb-2  ">
@@ -130,9 +124,9 @@ export default function Home() {
               <p className="text-gray-800 py-1">Figma</p>
               <p className="text-gray-800 py-1">Indesign</p>
             </div>
-          </div>
+          </div> */}
         </section>
-        <section className="py-10">
+        {/* <section className="py-10">
           <div>
             <h3 className="text-3xl py-1 dark:text-white ">Portofolio</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
@@ -204,7 +198,7 @@ export default function Home() {
               />
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
     </div>
   )
